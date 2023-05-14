@@ -7,13 +7,14 @@ export async function getStaticProps() {
     const res = await fetch(`https://fakestoreapi.com/products`)
     const data = await res.json()
     return {
-        props: {data}
+        props: {data}   
     }
 }
 
 export default function Product({data}) {
     const todolist = useSelector(state => state.todo.todoList)
     console.log(todolist)
+    console.log(data)
     return (
         <div>
             <h2>React Redux</h2>
